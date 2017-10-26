@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Form</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="login.js"></script>
+<style>
+  span{
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="main">
+      <form class="form" method="post" action="#">
+        <h2>Login</h2>
+        <label>User Name:</label><br>
+        <input type="text" name="username" class="usernameClass" placeholder="Enter user name"id="usernameID"><span></span><br>
+        <label>Password :</label><br>
+        <input type="password" name="password" placeholder="********" id="passwordID"><br>
+        <input type="button" name="login" id="login" value="Login">
+      </form>
+    </div>
+</div>
+</body>
+</html>
