@@ -22,3 +22,11 @@ value	of	1	means	it	is	available	whereas	a	value	of	0	means	it	has	been	borrowed
 the	start,	all	books	are	available.
 7.	Use	the file	"books.txt" on	the	server	side in	order	to	save	availability	and	borrowedBy	attributes	for
 each	book
+
+// TODO:
+
+1. Create login.html and login.js to validate user.
+2. If username and password = 'admin', then login as #librarian, if login username starts with U*****, then login as #undergraduate students.
+  a. #librarian has ability to add book to library. (Note: librarian could not borrow book.)
+  b. #undergraduate students could borrow up to 2 books at a time. And should return those books, before borrow different ones. The cell that contains a book has been borrowed should change to blue (or different color), and turn back to white when the user return the book.
+3. After login, user will be direct to booksLibrary.html. Each group of user will have different view of booksLibrary.html. In booksLibrary.html, first, it will be generate by getbooks.php from books.txt, then the html file will be populate by librarian if needed.
