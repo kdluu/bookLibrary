@@ -15,29 +15,49 @@ table, th, td {
     column-width: 100px;
     line-height: 5px;
 
+
 }
 th, td {
     padding: 10px;
+
 }
+input[type=text] {
+    width: 20%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    /*border-radius: 4px;*/
+    box-sizing: border-box;
+}
+#add_bookID {
+    padding: 9px 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    /*border-radius: 4px;*/
+}
+#add_bookID:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
 </style>
 <body>
-  <div id ="main">
-    This is the original text.
-  </div>
-  <button type="button" id = "ajax-button">Update content with Ajax</button>
   <table id="library">
-    <tr id="Art">
-        <th>Art</th>
-    </tr>
-    <tr id ="Sport">
-        <th>Sport</th>
-    </tr>
-        <th>Science</th>
     <tr>
-        <th>Literature</th>
-    </tr>
-
+    <th>Art</th>
+    <th>Sport</th>
+    <th>Science</th>
+    <th>Literature</th>
+  </tr>
 </table>
+<input type="text" name="book_name" placeholder="Book Name" id="book_nameID">
+<input type="text" name="shelf" placeholder="Shelf (Art, Sport, Science, Literature)" id="shelf_ID">
+<button type="button" name="add_book" id="add_bookID">Add Book</button>
+
 <script type="text/javascript" src="booksLibrary.js"></script>
 </body>
 </html>

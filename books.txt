@@ -1,5 +1,26 @@
 [
-{"Art":["Drawing","Guitar","Singing", "Dancing"]},
-{"Sport":["Running","Soccer","Football","Badminton"]},
-{"Science":["Volcano","Storm","El Nino","Mars"]},
-{"Literature":["The Dead Shall Rise","Blow with The Wind","The Titanic Story","The Flight 957"]}]
+  {
+  "Art": "Intro Drawing",
+  "Sport": "Basic Soccer",
+  "Science": "The Mars",
+  "Literature": "Dead Shall Rise"
+  },
+  {
+  "Art": "Introduction Piano",
+  "Sport": "Football Techniques",
+  "Science": "Human Body",
+  "Literature": "Alibaba"
+  },
+  {
+  "Art": "Advanced Painting",
+  "Sport": "Pro Fishing",
+  "Science": "Microbiology",
+  "Literature": "Shakespeare"
+  },
+  {
+  "Art": "Singing Practices",
+  "Sport": "Running",
+  "Science": "Physics 212",
+  "Literature": "Proposal"
+  }
+]

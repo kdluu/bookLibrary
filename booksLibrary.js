@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  $('#ajax-button').click(function () {
     $.ajax({
       type: 'GET',
       url: 'getbooks.php',
@@ -8,30 +7,20 @@ $(document).ready(function () {
       dataType: 'json',
       success: function (data) {
         //Now we have the books.txt in array.
-        console.log(data);
-        console.log(data[3].Literature[2]);
-        console.log('Data length: ' + data.length);
-        console.log('Art Length: ' + data[0].Art.length);
-        drawTable(data);
-        drawTable(data[1]);
+        // console.log(data);
+        // console.log(data[3].Literature[2]);
+        // console.log('Data length: ' + data.length);
+        // console.log('Art Length: ' + data[0].Art.length);
+        var book_data = '';
+        $.each(data, function(key, value){
+          book_data += '<tr>';
+          book_data += '<td>' +value.Art+ '</td>';
+          book_data += '<td>' +value.Sport+ '</td>';
+          book_data += '<td>' +value.Science+ '</td>';
+          book_data += '<td>' +value.Literature+ '</td>';
+        });
+        $('#library').append(book_data);
       },
       error: function (jqXHR, textStatus, error) { }
     });
-    function drawTable(data) {
-      for ($i = 0; $i < data.length; $i++) {
-        drawRow(data[$i]);
-      }
-      function drawRow(data) {
-        $row = $('<tr />');
-        $('#Art').append($row);
-        for ($i = 0; $i < data.Art.length; $i++) {
-          $row.append($('<td>' + data.Art[$i] + '</td>'));
-        }
-
-
-
-      }
-
-    }
-  });
 });
