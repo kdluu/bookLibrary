@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Books Library</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <style>
 table, th, td {
@@ -19,16 +21,23 @@ th, td {
 }
 </style>
 <body>
-  <table>
-    <tr>
-      <th>Art</th>
-      <th>Science</th>
-      <th>Sport</th>
-      <th>Literarture</th>
+  <div id ="main">
+    This is the original text.
+  </div>
+  <button type="button" id = "ajax-button">Update content with Ajax</button>
+  <table id="library">
+    <tr id="Art">
+        <th>Art</th>
     </tr>
-  </table>
-  <input type="text" name="bookName" placeholder= "Book Name" id="BookID">
-  <input type="text" name="shelfName" placeholder= "Shelf (Literature, Science, Sport, Art)" id="ShelfID">
-  <input type="button" name="addBook" id="addBookID" value="Add Book">
+    <tr id ="Sport">
+        <th>Sport</th>
+    </tr>
+        <th>Science</th>
+    <tr>
+        <th>Literature</th>
+    </tr>
+
+</table>
+<script type="text/javascript" src="booksLibrary.js"></script>
 </body>
 </html>
