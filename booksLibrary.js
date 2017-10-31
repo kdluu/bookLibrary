@@ -19,6 +19,7 @@ $(document).ready(function () {
       error: function (jqXHR, textStatus, error) { }
     });
     $count = 0;
+    $book =[];
     $('#library').on('click','td', function (event) {
       event.preventDefault();
         //  alert('Column :'+$(this).html().trim()); // Cell value
@@ -37,6 +38,7 @@ $(document).ready(function () {
             }
             else {
               $(this).css("background-color","#3CB371");
+              localStorage.setItem("book", $(this).html().trim());
             }
 
 
