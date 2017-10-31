@@ -6,11 +6,6 @@ $(document).ready(function () {
       data: { },
       dataType: 'json',
       success: function (data) {
-        //Now we have the books.txt in array.
-        // console.log(data);
-        // console.log(data[3].Literature[2]);
-        // console.log('Data length: ' + data.length);
-        // console.log('Art Length: ' + data[0].Art.length);
         var book_data = '';
         $.each(data, function(key, value){
           book_data += '<tr>';
@@ -23,4 +18,29 @@ $(document).ready(function () {
       },
       error: function (jqXHR, textStatus, error) { }
     });
+    $count = 0;
+    $('#library').on('click','td', function (event) {
+      event.preventDefault();
+        //  alert('Column :'+$(this).html().trim()); // Cell value
+       //alert('Column :'+$(this).index()); //Column index NOTE: Start from 0
+       //alert('Row:'+$(this).parent().index());//Row index
+        // alert('Row:'+$(this).parent().find('td').html().trim();//Row name
+        // alert('Column:'+$('#library thead tr th').eq($(this).index()).html().trim());//Header name
+            //$(this).toggleClass("green-cell");
+            //for ($i = 0; $i < 2; $i++)
+            $count ++;
+            if ($count > 2)
+            {
+              alert("Student can only borrow 2 books at a time");
+              $(this).css("background-color","#ffffff");
+
+            }
+            else {
+              $(this).css("background-color","#3CB371");
+            }
+
+
+    })
+
+
 });

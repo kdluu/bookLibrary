@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Books Library</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </head>
 <style>
 table, th, td {
@@ -14,12 +13,9 @@ table, th, td {
     border-collapse: collapse;
     column-width: 100px;
     line-height: 5px;
-
-
 }
 th, td {
     padding: 10px;
-
 }
 input[type=text] {
     width: 20%;
@@ -43,16 +39,24 @@ input[type=text] {
 #add_bookID:hover {
     background-color: #4CAF50;
     color: white;
-  }
+}
+.green-cell {
+   background: #3CB371;
+}
+.white-cell {
+   background: #ffffff;
+ }
 </style>
 <body>
   <table id="library">
+    <thead>
     <tr>
-    <th>Art</th>
-    <th>Sport</th>
-    <th>Science</th>
-    <th>Literature</th>
-  </tr>
+      <th>Art</th>
+      <th>Sport</th>
+      <th>Science</th>
+      <th>Literature</th>
+    </tr>
+  </thead>
 </table>
 <input type="text" name="book_name" placeholder="Book Name" id="book_nameID">
 <input type="text" name="shelf" placeholder="Shelf (Art, Sport, Science, Literature)" id="shelf_ID">
