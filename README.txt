@@ -1,5 +1,9 @@
 bookLirary README:
 
+NOTE: When using AJAX POST, remember to change permission of books.txt, unless POST will failed. (Ex: chmod 777 ./books.txt)
+NOTE: When testing for retrieve/store data from AJAX and getbooks.php. books.txt file should not empty when test for retrieve. When test for store, books.txt should be empty to see changes.
+
+Explanation:
 A. Login.js and Login.html
 
     1. Create login.html and login.js to validate user.
@@ -9,16 +13,16 @@ A. Login.js and Login.html
 
 B. booksLibrary.js bookLibrary.html
   1. Recall from localStorage to get username. Then direct to different view.
-    * admin has ability to add book to library. (Note: librarian could not borrow book.) 
+    * admin has ability to add book to library. (Note: librarian could not borrow book.)
     * undergraduate students could borrow up to 2 books at a time. The cell that contains a book has been borrowed should change to green (or different color).
   2. If username is admin:
     I. Using AJAX to get content of books.txt in getbooks.php:
-      a. If there is no data get back, which means books is empty, a new book library will be create.
+      a. If there is no data get back, which means books is empty, a new book library will be create and using AJAX POST to books.txt
       b. If there is data back from AJAX, book library will be loaded from an existing one.
     II. Also, admin could create new book and add to library.
       FAILED. I could not implement, add new book to library.
   3. If user start with 'U' or 'u':
-      a. If there is no data get back, which means books is empty, a new book library will be create.
+      a. If there is no data get back, which means books is empty, a new book library will be create and using AJAX POST to books.txt
       b. If there is data back from AJAX, book library will be loaded from an existing one.
       c. Student could borrow book from library. and the cell in table data should change color.
       d. Student could see who borrowed book.
