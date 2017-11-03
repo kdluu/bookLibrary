@@ -14,8 +14,14 @@ table, th, td {
     column-width: 100px;
     line-height: 5px;
 }
-th, td {
-    padding: 10px;
+th{
+    padding: 14px;
+    font-size: 18px;
+    font-family: serif;
+}
+td {
+  padding: 12px;
+  font-size: 16px;
 }
 input[type=text] {
     padding: 10px 70px;
@@ -39,31 +45,10 @@ input[type=text] {
     background-color: #4CAF50;
     color: white;
 }
-.green-cell {
-   background: #3CB371;
-}
-.white-cell {
-   background: #ffffff;
- }
 </style>
 <body>
-  <table id="library">
-    <thead>
-    <tr>
-      <th>Art</th>
-      <th>Sport</th>
-      <th>Science</th>
-      <th>Literature</th>
-    </tr>
-  </thead>
+<table id="library">
 </table>
-<!-- //TODO: Create Add Book For admin
-<input type="text" name="book_name" placeholder="Book Name" id="book_nameID">
-<input type="text" name="shelf" placeholder="Shelf (Art, Sport, Science, Literature)" id="shelf_ID">
-<button type="button" name="add_book" id="add_bookID">Add Book</button> -->
-
-<div id="addbook"></div>
-
 <script type="text/javascript" src="booksLibrary.js"></script>
 </body>
 </html>
